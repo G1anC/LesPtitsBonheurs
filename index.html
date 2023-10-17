@@ -7,15 +7,18 @@
     <title>Les P'tits Bonheurs</title>
 </head>
 <body>
-    <nav>
-        <a href="#home-section">1</a>
-        <a href="#home-section">2</a>
-        <a href="#home-section">3</a>
-        <a href="#home-section">4</a>
-        <a href="#home-section">5</a>
-        <a href="#home-section">6</a>
+    <button class="nav-button"onclick="
+        handleNavBar();
+    ">Menu</button>
+    <nav data-status="inactive">
+        <div class="link-holder"><a href="#home-section">Acceuil</a></div>
+        <div class="link-holder"><a href="#home-section">Nous</a></div>
+        <div class="link-holder" id="plat-du-jour"><a href="#home-section">Plat du jour</a></div>
+        <div class="link-holder"><a href="#home-section">Casiers</a></div>
+        <div class="link-holder"><a href="#home-section">Contact</a></div>
+        <div class="nothing">yooow</div>
     </nav>
-
+    </button>
     <section id="home-section">
         <h1 id="primary-title">Les P'tits Bonheurs</h1>
     </section>
@@ -42,5 +45,6 @@
     <section id="-section">
         
     </section>
+    <script src="JS/handleNavBar.js"></script>
 </body>
 </html>

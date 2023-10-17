@@ -1,5 +1,6 @@
 $light-cream: #FFF3E2;
-$dark-cream: #FFE5CA;
+$dark-cream: #fdddbb;
+$slight-red: #f9b6a9;
 $light-red: #ea765f;
 $dark-red: #E74646;
 
@@ -14,20 +15,88 @@ body {
         height: 100vh;
         width: 100vw;
     }
-    nav {
-        position: fixed;
-        display:flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        background-color: $dark-cream;
-        z-index: 2;
-        left: 0;
-        top:0;
-        height: 100vh;
-        width: 150px;
+    
+
+}
+
+@keyframes dropIn {
+    0% {
+        transform: translateX(-61vw);
+    }
+    100% {
+        transform: translateX(61vw);
     }
 }
+
+@keyframes dropOut {
+    100% {
+        transform: translateX(-61vw);
+    }
+    0% {
+        transform: translateX(61vw);
+    }
+}
+
+nav {
+    position: fixed;
+    display:flex;
+    border-radius: 20px;
+    justify-content: start;
+    align-items: start;
+    padding-left: 20px;
+    backdrop-filter: blur(7px);
+    background:rgba(255,255,255,0.4);
+    z-index: 2;
+    right: -60vw;
+    border: 1px $light-red solid;
+    top: 10px;
+    height: 60px;
+    width: 50vw;
+    &[data-status="inactive"] { animation: dropOut 500ms ease-in-out forwards; }
+    &[data-status="active"] { animation: dropIn 500ms ease-in-out forwards; }
+    .nothing {
+        color: transparent;
+    }
+    .link-holder {
+        display: flex;
+        text-align: center;
+        width: 100px;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        a {
+            text-decoration: none;
+            color: $light-red;
+            font-size: 20px;
+            transition: 100ms ease-in-out;
+            &:hover {
+                color: $dark-red;
+                font-weight: bold;
+                font-size: 25px;
+            }
+        }
+    } #plat-du-jour { width: 130px; }
+    
+}
+
+.nav-button {
+    position: fixed;
+    top: 10px;
+    right: 0;
+    width: 80px;
+    height: 61px;
+    border: none;
+    background-color: $light-red;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index:4;
+    transition: 100ms ease-in-out;
+    &:hover {
+        cursor: pointer;
+        background-color: $dark-red;
+    }
+}
+
 
 #primary-title {
     font-family: 'Montserrat', sans-serif;  
