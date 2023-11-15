@@ -1,3 +1,15 @@
+@import "SPECS/contact";
+@import "SPECS/nous";
+
+@font-face {
+    font-family: 'Vegan';
+    src: url("../ASSETS/FONTS/Vegan.woff2");
+}
+
+@font-face {
+    font-family: 'Gamilia';
+    src: url("../ASSETS/FONTS/Gamilia.woff2");
+}
 
 // keyframes animations for nav bar arrival
 
@@ -12,81 +24,64 @@
 }
 
 // general coloring settings
-
-$bg-color: rgb(28, 16, 19);
+$main-color : #F2E8CF;
+$lred : #e4585a;
+$dred : rgb(194, 35, 37);
+$bg-color: rgb(26, 23, 23);
+$title-font: 'Vegan';
+$regular-font: 'Gamilia';
 
 
 // default settings 
 
 body {
     background-color: $bg-color;
-    margin: 0;
     overflow-x: hidden;
     padding: 0;
-
-    section {
-        position:relative;
-        height: 100vh;
-        width: 100vw;
-    }
+    margin: 0;
+    font-family: $regular-font;
 }
 
 nav {
     position: sticky;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(3px);
-    background: linear-gradient(to bottom, rgb(78, 0, 0), rgba(0, 0, 0, 0));
+    height: 12vh;
+    width: 100%;
+
     z-index: 2;
     left: 0;
     top: 0;
-    height: 80px;
-    width: 100%;
-
-    .nothing {
-        color: transparent;
-    }
-
-    .link-holder {
+    background-color: transparent;
+    color: $main-color;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    & > * {
         display: flex;
-        display:  -webkit-sticky;
-        text-align: center;
-        width: 100px;
         justify-content: center;
         align-items: center;
         height: 100%;
-        transition: 100ms ease-in-out;
-        text-decoration: none;
-        color: white;
-        &:hover {
-            color: red;
-            background: linear-gradient(rgb(123, 24, 24), transparent);
-            font-size: 20px;
-        }
-
-        a { text-decoration: none; color: white; }
+        border-bottom: 1px solid $main-color;
     }
-    #plat-du-jour { width: 130px; }
-    
-}
+    #LPB {
+        width: calc(12.5vw + 150px);
 
-#primary-title {
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-}
+        font-weight: lighter;
+        font-family: $title-font;
+        font-size: calc(25px + 1vw);
+        color : $dred;
+    }
+    .link-wrapper {
+        height: 100%;
+        width: calc(50px + 3vw);
+        .link {
+            color: $main-color;
+            text-decoration: none;
+            font-size: calc(12px + 0.5vw);
+            transition: all 0.1s ease-in;
+            &:hover {
+                color: $lred;
+            }
+        }
+    }
 
-#home-section {
-    height: 100vh;
-    width: 100vw;
-}
-
-#plat-du-jour-section {
-    height: 100vh;
-    width: 100vw;
-}
-
-#casiers-section {
-    height: 100vh;
-    width: 100vw;
 }

@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Vegan";
+  src: url("../ASSETS/FONTS/Vegan.woff2");
+}
+@font-face {
+  font-family: "Gamilia";
+  src: url("../ASSETS/FONTS/Gamilia.woff2");
+}
 @keyframes dropIn {
   0% {
     transform: translateX(-61vw);
@@ -15,75 +23,50 @@
   }
 }
 body {
-  background-color: rgb(28, 16, 19);
-  margin: 0;
+  background-color: rgb(26, 23, 23);
   overflow-x: hidden;
   padding: 0;
-}
-body section {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
+  margin: 0;
+  font-family: "Gamilia";
 }
 
 nav {
   position: sticky;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-  background: linear-gradient(to bottom, rgb(78, 0, 0), rgba(0, 0, 0, 0));
+  height: 12vh;
+  width: 100%;
   z-index: 2;
   left: 0;
   top: 0;
-  height: 80px;
-  width: 100%;
-}
-nav .nothing {
-  color: transparent;
-}
-nav .link-holder {
+  background-color: transparent;
+  color: #F2E8CF;
   display: flex;
-  display: -webkit-sticky;
-  text-align: center;
-  width: 100px;
+  align-items: center;
+  justify-content: center;
+}
+nav > * {
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  transition: 100ms ease-in-out;
+  border-bottom: 1px solid #F2E8CF;
+}
+nav #LPB {
+  width: calc(12.5vw + 150px);
+  font-weight: lighter;
+  font-family: "Vegan";
+  font-size: calc(25px + 1vw);
+  color: rgb(194, 35, 37);
+}
+nav .link-wrapper {
+  height: 100%;
+  width: calc(50px + 3vw);
+}
+nav .link-wrapper .link {
+  color: #F2E8CF;
   text-decoration: none;
-  color: white;
+  font-size: calc(12px + 0.5vw);
+  transition: all 0.1s ease-in;
 }
-nav .link-holder:hover {
-  color: red;
-  background: linear-gradient(rgb(123, 24, 24), transparent);
-  font-size: 20px;
-}
-nav .link-holder a {
-  text-decoration: none;
-  color: white;
-}
-nav #plat-du-jour {
-  width: 130px;
-}
-
-#primary-title {
-  font-family: "Montserrat", sans-serif;
-  color: white;
-}
-
-#home-section {
-  height: 100vh;
-  width: 100vw;
-}
-
-#plat-du-jour-section {
-  height: 100vh;
-  width: 100vw;
-}
-
-#casiers-section {
-  height: 100vh;
-  width: 100vw;
+nav .link-wrapper .link:hover {
+  color: #e4585a;
 }/*# sourceMappingURL=general.css.map */
