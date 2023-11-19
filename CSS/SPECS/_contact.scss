@@ -1,0 +1,56 @@
+$main-color : #F2E8CF;
+$lred : #e4585a;
+$bg-color: rgb(26, 23, 23);
+$title-font: 'Vegan';
+$regular-font: 'Gamilia';
+
+#contact-body {
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+    form {
+        margin-top: 12vh;
+        display:flex;
+        text-align: center;
+        flex-direction:column;
+        align-items:center;
+        gap: 15px;
+        height: auto;
+        width: 70vw;
+
+        button, input, textarea {
+            width: 60vw;
+            text-align:center;
+            border-radius : 10px;
+            border: none;
+            border-top : 1px solid $main-color;
+            border-bottom : 1px solid $main-color;
+            background: transparent;
+            color: $main-color;
+            font-size: 25px;
+            opacity: 100%;
+            font-family: $regular-font;
+            transition: 0.1s all ease-in;
+            &:hover {
+                font-family: $title-font;
+                color: $lred;
+                font-size: 35px;
+            }
+            &:focus {
+                color: $main-color;
+                font-family: $regular-font;
+            }
+        }
+
+        button, input { height: 15vh; }
+
+        textarea, input { &::placeholder { opacity: 1; &:focus { content: none; } } }
+
+        button { width: 60.5vw; height: 15vh; }
+
+        textarea { height: calc(50vh - 25px); padding-top: 25px; }
+    }
+}

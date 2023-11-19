@@ -1,2 +1,3 @@
 # Les-P-tits-Bonheurs
-My parents restaurent's website !
+
+A well deserved website for my parent's restaurant.

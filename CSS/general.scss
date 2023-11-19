@@ -1,5 +1,6 @@
 @import "SPECS/contact";
 @import "SPECS/nous";
+@import "SPECS/index";
 
 @font-face {
     font-family: 'Vegan';
@@ -26,7 +27,6 @@
 // general coloring settings
 $main-color : #F2E8CF;
 $lred : #e4585a;
-$dred : rgb(194, 35, 37);
 $bg-color: rgb(26, 23, 23);
 $title-font: 'Vegan';
 $regular-font: 'Gamilia';
@@ -40,13 +40,14 @@ body {
     padding: 0;
     margin: 0;
     font-family: $regular-font;
+    color : $main-color;
+    font-size: 16px;
 }
 
 nav {
-    position: sticky;
+    position: fixed;
     height: 12vh;
-    width: 100%;
-
+    width: 100vw;
     z-index: 2;
     left: 0;
     top: 0;
@@ -57,18 +58,20 @@ nav {
     justify-content: center;
     & > * {
         display: flex;
+        border-bottom: 1px solid $main-color;
         justify-content: center;
         align-items: center;
         height: 100%;
-        border-bottom: 1px solid $main-color;
+        justify-content: center;
     }
+    #contact { border-bottom-right-radius: 10px; }
+    #acceuil { border-bottom-left-radius: 10px; }
     #LPB {
-        width: calc(12.5vw + 150px);
-
+        width: calc(12.5vw + 100px);
         font-weight: lighter;
         font-family: $title-font;
-        font-size: calc(25px + 1vw);
-        color : $dred;
+        font-size: calc(22px + 0.75vw);
+        color : $lred;
     }
     .link-wrapper {
         height: 100%;
@@ -76,7 +79,7 @@ nav {
         .link {
             color: $main-color;
             text-decoration: none;
-            font-size: calc(12px + 0.5vw);
+            font-size: calc(16px + 0.5vw);
             transition: all 0.1s ease-in;
             &:hover {
                 color: $lred;
@@ -84,4 +87,51 @@ nav {
         }
     }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.center-bar {
+    width:1px;
+    top: 0;
+    position:absolute;
+    left: 50%;
+    height: 10000px;
+    background-color: white;
 }

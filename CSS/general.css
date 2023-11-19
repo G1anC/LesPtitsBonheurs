@@ -1,3 +1,72 @@
+#contact-body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact-body form {
+  margin-top: 12vh;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  height: auto;
+  width: 70vw;
+}
+#contact-body form button, #contact-body form input, #contact-body form textarea {
+  width: 60vw;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  border-top: 1px solid #F2E8CF;
+  border-bottom: 1px solid #F2E8CF;
+  background: transparent;
+  color: #F2E8CF;
+  font-size: 25px;
+  opacity: 100%;
+  font-family: "Gamilia";
+  transition: 0.1s all ease-in;
+}
+#contact-body form button:hover, #contact-body form input:hover, #contact-body form textarea:hover {
+  font-family: "Vegan";
+  color: #e4585a;
+  font-size: 35px;
+}
+#contact-body form button:focus, #contact-body form input:focus, #contact-body form textarea:focus {
+  color: #F2E8CF;
+  font-family: "Gamilia";
+}
+#contact-body form button, #contact-body form input {
+  height: 15vh;
+}
+#contact-body form textarea::-moz-placeholder, #contact-body form input::-moz-placeholder {
+  opacity: 1;
+}
+#contact-body form textarea::placeholder, #contact-body form input::placeholder {
+  opacity: 1;
+}
+#contact-body form textarea::-moz-placeholder:focus, #contact-body form input::-moz-placeholder:focus {
+  content: none;
+}
+#contact-body form textarea::placeholder:focus, #contact-body form input::placeholder:focus {
+  content: none;
+}
+#contact-body form button {
+  width: 60.5vw;
+  height: 15vh;
+}
+#contact-body form textarea {
+  height: calc(50vh - 25px);
+  padding-top: 25px;
+}
+
+#home .intro-text {
+  font-size: 4.5vw;
+  text-align: center;
+}
+
 @font-face {
   font-family: "Vegan";
   src: url("../ASSETS/FONTS/Vegan.woff2");
@@ -28,12 +97,14 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Gamilia";
+  color: #F2E8CF;
+  font-size: 16px;
 }
 
 nav {
-  position: sticky;
+  position: fixed;
   height: 12vh;
-  width: 100%;
+  width: 100vw;
   z-index: 2;
   left: 0;
   top: 0;
@@ -45,17 +116,24 @@ nav {
 }
 nav > * {
   display: flex;
+  border-bottom: 1px solid #F2E8CF;
   justify-content: center;
   align-items: center;
   height: 100%;
-  border-bottom: 1px solid #F2E8CF;
+  justify-content: center;
+}
+nav #contact {
+  border-bottom-right-radius: 10px;
+}
+nav #acceuil {
+  border-bottom-left-radius: 10px;
 }
 nav #LPB {
-  width: calc(12.5vw + 150px);
+  width: calc(12.5vw + 100px);
   font-weight: lighter;
   font-family: "Vegan";
-  font-size: calc(25px + 1vw);
-  color: rgb(194, 35, 37);
+  font-size: calc(22px + 0.75vw);
+  color: #e4585a;
 }
 nav .link-wrapper {
   height: 100%;
@@ -64,9 +142,18 @@ nav .link-wrapper {
 nav .link-wrapper .link {
   color: #F2E8CF;
   text-decoration: none;
-  font-size: calc(12px + 0.5vw);
+  font-size: calc(16px + 0.5vw);
   transition: all 0.1s ease-in;
 }
 nav .link-wrapper .link:hover {
   color: #e4585a;
+}
+
+.center-bar {
+  width: 1px;
+  top: 0;
+  position: absolute;
+  left: 50%;
+  height: 10000px;
+  background-color: white;
 }/*# sourceMappingURL=general.css.map */
